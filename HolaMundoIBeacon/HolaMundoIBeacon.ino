@@ -6,6 +6,7 @@
 // 2019-07-07
 //
 // --------------------------------------------------------------
+// DIOS TEN PIEDAD
 
 // https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython
 
