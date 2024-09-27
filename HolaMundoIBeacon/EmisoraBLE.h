@@ -1,20 +1,7 @@
 // -*- mode: c++ -*-
 
-// ----------------------------------------------------------
-// Jordi Bataller i Mascarell
-// 2019-07-07
-// ----------------------------------------------------------
 #ifndef EMISORA_H_INCLUIDO
 #define EMISORA_H_INCLUIDO
-
-// Buena introducción: https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gap
-// https://os.mbed.com/blog/entry/BLE-Beacons-URIBeacon-AltBeacons-iBeacon/
-
-// fuente: https://www.instructables.com/id/Beaconeddystone-and-Adafruit-NRF52-Advertise-Your-/
-// https://github.com/nkolban/ESP32_BLE_Arduino/blob/master/src/BLEBeacon.h
-
-// https://os.mbed.com/blog/entry/BLE-Beacons-URIBeacon-AltBeacons-iBeacon/
-// https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/bleadvertising
 
 // ----------------------------------------------------------
 // ----------------------------------------------------------

@@ -2,18 +2,11 @@
 
 // --------------------------------------------------------------
 //
-// Jordi Bataller i Mascarell
-// 2019-07-07
+// Javier Serrano
+// DIOS TEN PIEDAD
 //
 // --------------------------------------------------------------
-// DIOS TEN PIEDAD
 
-// https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython
-
-// https://stackoverflow.com/questions/29246805/can-an-ibeacon-have-a-data-payload
-
-// --------------------------------------------------------------
-// --------------------------------------------------------------
 #include <bluefruit.h>
 
 #undef min // vaya tela, están definidos en bluefruit.h y  !
@@ -171,7 +164,7 @@ void loop () {
   };
 
   // elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
-  elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( "MolaMolaMolaMolaMolaM", 21 );
+  elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
 
   esperar( 2000 );
 
