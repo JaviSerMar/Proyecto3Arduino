@@ -16,8 +16,8 @@ class Publicador {
 private:
 
   uint8_t beaconUUID[16] = { 
-	'c', 'h', 'o', 'l', 'o', '-', 's', 'i', 
-	'm', 'e', 'o', 'n', 'e', 0, 0, 0
+	'c', 'h', 'o', 'l', 'o', 's', 'i', 
+	'm', 'e', 'o', 'n', 'e', 'j','e','f','e'
 };
 
 
