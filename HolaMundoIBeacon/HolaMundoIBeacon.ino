@@ -1,159 +1,188 @@
-// -*-c++-*-
 
-// --------------------------------------------------------------
-//
-// Javier Serrano
-// DIOS TEN PIEDAD
-//
-// --------------------------------------------------------------
+
+/**
+ * @file main.cpp
+ * @brief Controlador principal para la placa BLE.
+ * 
+ * Este archivo contiene las funciones principales del ciclo de vida de la placa
+ * que mide CO2 y temperatura, y publica los datos usando Bluetooth Low Energy (BLE).
+ */
 
 #include <bluefruit.h>
 
-#undef min // vaya tela, están definidos en bluefruit.h y  !
-#undef max // colisionan con los de la biblioteca estándar
+#undef min 
+#undef max 
 
-// --------------------------------------------------------------
-// --------------------------------------------------------------
+
 #include "LED.h"
 #include "PuertoSerie.h"
 
-// --------------------------------------------------------------
-// --------------------------------------------------------------
+
+/// @namespace Globales
+/// Espacio de nombres que contiene instancias globales de los componentes utilizados.
 namespace Globales {
   
+
+
+  /**
+   * @brief Instancia del LED conectado al pin 7.
+   */
   LED elLED ( /* NUMERO DEL PIN LED = */ 7 );
 
+
+
+  /**
+   * @brief Instancia del puerto serie configurado a una velocidad de 115200 baudios.
+   */
   PuertoSerie elPuerto ( /* velocidad = */ 115200 ); // 115200 o 9600 o ...
 
-  // Serial1 en el ejemplo de Curro creo que es la conexión placa-sensor 
 };
 
-// --------------------------------------------------------------
-// --------------------------------------------------------------
 #include "EmisoraBLE.h"
 #include "Publicador.h"
 #include "Medidor.h"
 
 
-// --------------------------------------------------------------
-// --------------------------------------------------------------
 namespace Globales {
 
+
+
+  /**
+   * @brief Instancia del publicador BLE para enviar los datos.
+   */
   Publicador elPublicador;
 
+
+
+  /**
+   * @brief Instancia del medidor de CO2 y temperatura.
+   */
   Medidor elMedidor;
 
-}; // namespace
+};
 
-// --------------------------------------------------------------
-// --------------------------------------------------------------
+
+
+
+/**
+ * @brief Inicializa los componentes de la placa.
+ * 
+ * Esta función se encarga de inicializar cualquier periférico o componente adicional
+ * conectado a la placa.
+ */
 void inicializarPlaquita () {
 
-  // de momento nada
+  
 
-} // ()
+} 
 
-// --------------------------------------------------------------
-// setup()
-// --------------------------------------------------------------
+
+
+/**
+ * @brief Función de configuración (setup).
+ * 
+ * Esta función se ejecuta una sola vez al inicio del programa y prepara el puerto serie,
+ * inicializa la emisora BLE y el medidor de CO2 y temperatura.
+ */
 void setup() {
 
-  Globales::elPuerto.esperarDisponible();
+  Globales::elPuerto.esperarDisponible(); ///< Espera a que el puerto serie esté disponible.
 
-  // 
-  // 
-  // 
-  inicializarPlaquita();
+  inicializarPlaquita(); ///< Inicializa la placa.
 
-  // Suspend Loop() to save power
-  // suspendLoop();
+  Globales::elPublicador.encenderEmisora(); ///< Enciende la emisora BLE.
 
-  // 
-  // 
-  // 
-  Globales::elPublicador.encenderEmisora();
-
-  // Globales::elPublicador.laEmisora.pruebaEmision();
   
-  // 
-  // 
-  // 
-  Globales::elMedidor.iniciarMedidor();
+  Globales::elMedidor.iniciarMedidor(); ///< Inicia el medidor de CO2 y temperatura.
 
-  // 
-  // 
-  // 
-  esperar( 1000 );
+  esperar( 1000 ); ///< Espera 1 segundo.
 
-  Globales::elPuerto.escribir( "---- setup(): fin ---- \n " );
+  Globales::elPuerto.escribir( "---- setup(): fin ---- \n " ); ///< Escribe un mensaje en el puerto serie indicando que el setup ha finalizado.
 
-} // setup ()
+} 
 
-// --------------------------------------------------------------
-// --------------------------------------------------------------
+
+
+/**
+ * @brief Controla la secuencia de parpadeo del LED.
+ * 
+ * Esta función activa y desactiva el LED con un brillo del 100% durante varios intervalos de tiempo.
+ */
+
 inline void lucecitas() {
   using namespace Globales;
 
-  elLED.brillar( 100 ); // 100 encendido
-  esperar ( 400 ); //  100 apagado
-  elLED.brillar( 100 ); // 100 encendido
-  esperar ( 400 ); //  100 apagado
-  Globales::elLED.brillar( 100 ); // 100 encendido
-  esperar ( 400 ); //  100 apagado
-  Globales::elLED.brillar( 1000 ); // 1000 encendido
-  esperar ( 1000 ); //  100 apagado
-} // ()
+  elLED.brillar( 100 ); ///< Enciende el LED al 100% de brillo.
+  esperar ( 400 ); ///< Espera 400 ms.
+  elLED.brillar( 100 ); 
+  esperar ( 400 ); 
+  Globales::elLED.brillar( 100 ); 
+  esperar ( 400 ); 
+  Globales::elLED.brillar( 1000 ); ///< Enciende el LED al 100% de brillo por un tiempo más largo.
+  esperar ( 1000 ); ///< Espera 1 segundo.
+}
+} 
 
-// --------------------------------------------------------------
-// loop ()
-// --------------------------------------------------------------
+
+/**
+ * @namespace Loop
+ * @brief Espacio de nombres que contiene las variables relacionadas con el bucle principal.
+ */
 namespace Loop {
+
+
+  /**
+   * @brief Contador del número de iteraciones del bucle principal.
+   */
   uint8_t cont = 0;
 };
 
-// ..............................................................
-// ..............................................................
+
+
+
+/**
+ * @brief Bucle principal del programa (loop).
+ * 
+ * Esta función se ejecuta continuamente y se encarga de realizar mediciones
+ * de CO2 y temperatura, publicarlas mediante BLE, y manejar la secuencia de parpadeo del LED.
+ */
 void loop () {
 
   using namespace Loop;
   using namespace Globales;
 
-  cont++;
+  cont++; ///< Incrementa el contador de iteraciones del bucle.
 
   elPuerto.escribir( "\n---- loop(): empieza " );
   elPuerto.escribir( cont );
   elPuerto.escribir( "\n" );
 
 
-  lucecitas();
+  lucecitas(); ///< Ejecuta la secuencia de parpadeo del LED.
 
-  // 
-  // mido y publico
-  // 
-  int valorCO2 = elMedidor.medirCO2();
+  
+  // Medición y publicación de CO2
+  int valorCO2 = elMedidor.medirCO2(); ///< Mide el valor del CO2.
   
   elPublicador.publicarCO2( valorCO2,
 							cont,
-							1000 // intervalo de emisión
-							);
+							1000 
+							); ///< Publica el valor del CO2.
   
-  // 
-  // mido y publico
-  // 
-  int valorTemperatura = elMedidor.medirTemperatura();
+  
+
+
+  // Medición y publicación de temperatura
+  int valorTemperatura = elMedidor.medirTemperatura(); ///< Mide la temperatura.
   
   elPublicador.publicarTemperatura( valorTemperatura, 
 									cont,
-									1000 // intervalo de emisión
-									);
+									1000 
+									); ///< Publica el valor de la temperatura.
 
-  // 
-  // prueba para emitir un iBeacon y poner
-  // en la carga (21 bytes = uuid 16 major 2 minor 2 txPower 1 )
-  // lo que queramos (sin seguir dicho formato)
-  // 
-  // Al terminar la prueba hay que hacer Publicador::laEmisora privado
-  // 
+  
+
+  // Publicación de un anuncio iBeacon libre
   char datos[21] = {
 	'H', 'o', 'l', 'a',
 	'H', 'o', 'l', 'a',
@@ -163,22 +192,16 @@ void loop () {
 	'H'
   };
 
-  // elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
-  elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
+  elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 ); ///< Emite un anuncio iBeacon con los datos.
 
-  esperar( 2000 );
+  esperar( 2000 ); ///< Espera 2 segundos.
 
-  elPublicador.laEmisora.detenerAnuncio();
+  elPublicador.laEmisora.detenerAnuncio(); ///< Detiene el anuncio BLE.
   
-  // 
-  // 
-  // 
+
+  
   elPuerto.escribir( "---- loop(): acaba **** " );
   elPuerto.escribir( cont );
   elPuerto.escribir( "\n" );
   
-} // loop ()
-// --------------------------------------------------------------
-// --------------------------------------------------------------
-// --------------------------------------------------------------
-// --------------------------------------------------------------
+} 
