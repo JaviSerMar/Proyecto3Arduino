@@ -1,0 +1,96 @@
+\doxysection{Referencia de la clase Puerto\+Serie}
+\hypertarget{class_puerto_serie}{}\label{class_puerto_serie}\index{PuertoSerie@{PuertoSerie}}
+
+
+Clase para gestionar la comunicación a través de un puerto serie.  
+
+
+
+
+{\ttfamily \#include $<$Puerto\+Serie.\+h$>$}
+
+
+
+Diagrama de colaboración de Puerto\+Serie\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_puerto_serie__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1}{Puerto\+Serie}} (long baudios)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_puerto_serie}{Puerto\+Serie}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_puerto_serie_acdb696d30440a38dac61f5f73625935a}{esperar\+Disponible}} ()
+\begin{DoxyCompactList}\small\item\em Espera a que el puerto serie esté disponible. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4}{escribir}} (T mensaje)
+\begin{DoxyCompactList}\small\item\em Escribe un mensaje en el puerto serie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para gestionar la comunicación a través de un puerto serie. 
+
+Proporciona métodos para inicializar el puerto serie, verificar su disponibilidad y enviar datos a través de él. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1}\index{PuertoSerie@{PuertoSerie}!PuertoSerie@{PuertoSerie}}
+\index{PuertoSerie@{PuertoSerie}!PuertoSerie@{PuertoSerie}}
+\doxysubsubsection{\texorpdfstring{PuertoSerie()}{PuertoSerie()}}
+{\footnotesize\ttfamily \label{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1} 
+Puerto\+Serie\+::\+Puerto\+Serie (\begin{DoxyParamCaption}\item[{long}]{baudios}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_puerto_serie}{Puerto\+Serie}. 
+
+Inicializa la comunicación serie con la velocidad en baudios especificada.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em baudios} & Velocidad en baudios para la comunicación serie (por ejemplo, 115200). \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Inicia la comunicación serie.
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4}\index{PuertoSerie@{PuertoSerie}!escribir@{escribir}}
+\index{escribir@{escribir}!PuertoSerie@{PuertoSerie}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily \label{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4} 
+template$<$typename T $>$ \\
+void Puerto\+Serie\+::escribir (\begin{DoxyParamCaption}\item[{T}]{mensaje}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Escribe un mensaje en el puerto serie. 
+
+Esta función envía un mensaje a través del puerto serie utilizando la función {\ttfamily Serial.\+print}.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & El tipo de dato del mensaje que será enviado (puede ser texto, número, etc.). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parámetros}
+{\em mensaje} & El mensaje que será enviado por el puerto serie. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Envia el mensaje por el puerto serie.\Hypertarget{class_puerto_serie_acdb696d30440a38dac61f5f73625935a}\index{PuertoSerie@{PuertoSerie}!esperarDisponible@{esperarDisponible}}
+\index{esperarDisponible@{esperarDisponible}!PuertoSerie@{PuertoSerie}}
+\doxysubsubsection{\texorpdfstring{esperarDisponible()}{esperarDisponible()}}
+{\footnotesize\ttfamily \label{class_puerto_serie_acdb696d30440a38dac61f5f73625935a} 
+void Puerto\+Serie\+::esperar\+Disponible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Espera a que el puerto serie esté disponible. 
+
+Realiza una breve espera para asegurar que el puerto serie esté listo antes de continuar. \texorpdfstring{$<$}{<} Pausa durante 10 milisegundos para dar tiempo a que el puerto serie esté disponible.
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+Hola\+Mundo\+IBeacon/\mbox{\hyperlink{_puerto_serie_8h}{Puerto\+Serie.\+h}}\end{DoxyCompactItemize}

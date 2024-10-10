@@ -1,0 +1,158 @@
+\doxysection{Referencia de la clase Servicio\+En\+Emisora}
+\hypertarget{class_servicio_en_emisora}{}\label{class_servicio_en_emisora}\index{ServicioEnEmisora@{ServicioEnEmisora}}
+
+
+Clase para gestionar un servicio BLE y sus características.  
+
+
+
+
+{\ttfamily \#include $<$Servicio\+En\+Emisora.\+h$>$}
+
+
+
+Diagrama de colaboración de Servicio\+En\+Emisora\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_servicio_en_emisora__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}}
+\begin{DoxyCompactList}\small\item\em Clase que representa una característica BLE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_servicio_en_emisora_a67e4204bdf55ba3d99624cbe47ee0eff}{Callback\+Caracteristica\+Escrita}}
+\begin{DoxyCompactList}\small\item\em Definición del tipo de callback para características BLE escritas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servicio_en_emisora_a17d9dcafb552b3e76bc7ff2e6fb238f2}{Servicio\+En\+Emisora}} (const char \texorpdfstring{$\ast$}{*}nombre\+Servicio\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_servicio_en_emisora}{Servicio\+En\+Emisora}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servicio_en_emisora_a59267e82dca13b83913e578efacce794}{escribe\+UUID}} ()
+\begin{DoxyCompactList}\small\item\em Escribe el UUID del servicio en el puerto serie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servicio_en_emisora_af25a77d5c2b3edfe5c99fc9fa00729bf}{anyadir\+Caracteristica}} (\mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}} \&car)
+\begin{DoxyCompactList}\small\item\em Añade una característica al servicio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servicio_en_emisora_a387f170420610e1ba1fe71b471c1ca23}{activar\+Servicio}} ()
+\begin{DoxyCompactList}\small\item\em Activa el servicio BLE y sus características. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_servicio_en_emisora_a0d04b53b2379140293924ef1ecbfeebe}{operator BLEService \&}} ()
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador para devolver el servicio BLE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para gestionar un servicio BLE y sus características. 
+
+Esta clase permite definir un servicio BLE, agregarle características y activarlo para que funcione en una emisora. 
+
+\doxysubsection{Documentación de los «\+Typedef» miembros de la clase}
+\Hypertarget{class_servicio_en_emisora_a67e4204bdf55ba3d99624cbe47ee0eff}\index{ServicioEnEmisora@{ServicioEnEmisora}!CallbackCaracteristicaEscrita@{CallbackCaracteristicaEscrita}}
+\index{CallbackCaracteristicaEscrita@{CallbackCaracteristicaEscrita}!ServicioEnEmisora@{ServicioEnEmisora}}
+\doxysubsubsection{\texorpdfstring{CallbackCaracteristicaEscrita}{CallbackCaracteristicaEscrita}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_a67e4204bdf55ba3d99624cbe47ee0eff} 
+using \mbox{\hyperlink{class_servicio_en_emisora_a67e4204bdf55ba3d99624cbe47ee0eff}{Servicio\+En\+Emisora\+::\+Callback\+Caracteristica\+Escrita}}}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ void\ (\ uint16\_t\ conn\_handle,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BLECharacteristic\ *\ chr,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *\ data,\ uint16\_t\ len)}
+
+\end{DoxyCode}
+
+
+Definición del tipo de callback para características BLE escritas. 
+
+Esta función se llama cuando una característica BLE es escrita desde un cliente BLE.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em conn\+\_\+handle} & Identificador de la conexión BLE. \\
+\hline
+{\em chr} & Puntero a la característica BLE escrita. \\
+\hline
+{\em data} & Puntero a los datos escritos. \\
+\hline
+{\em len} & Longitud de los datos escritos. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_servicio_en_emisora_a17d9dcafb552b3e76bc7ff2e6fb238f2}\index{ServicioEnEmisora@{ServicioEnEmisora}!ServicioEnEmisora@{ServicioEnEmisora}}
+\index{ServicioEnEmisora@{ServicioEnEmisora}!ServicioEnEmisora@{ServicioEnEmisora}}
+\doxysubsubsection{\texorpdfstring{ServicioEnEmisora()}{ServicioEnEmisora()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_a17d9dcafb552b3e76bc7ff2e6fb238f2} 
+Servicio\+En\+Emisora\+::\+Servicio\+En\+Emisora (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+Servicio\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_servicio_en_emisora}{Servicio\+En\+Emisora}. 
+
+Inicializa el servicio BLE con un nombre UUID.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\+Servicio\+\_\+} & Nombre del servicio en formato string. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_servicio_en_emisora_a387f170420610e1ba1fe71b471c1ca23}\index{ServicioEnEmisora@{ServicioEnEmisora}!activarServicio@{activarServicio}}
+\index{activarServicio@{activarServicio}!ServicioEnEmisora@{ServicioEnEmisora}}
+\doxysubsubsection{\texorpdfstring{activarServicio()}{activarServicio()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_a387f170420610e1ba1fe71b471c1ca23} 
+void Servicio\+En\+Emisora\+::activar\+Servicio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Activa el servicio BLE y sus características. 
+
+Llama a {\ttfamily begin} para iniciar el servicio y activar sus características. \Hypertarget{class_servicio_en_emisora_af25a77d5c2b3edfe5c99fc9fa00729bf}\index{ServicioEnEmisora@{ServicioEnEmisora}!anyadirCaracteristica@{anyadirCaracteristica}}
+\index{anyadirCaracteristica@{anyadirCaracteristica}!ServicioEnEmisora@{ServicioEnEmisora}}
+\doxysubsubsection{\texorpdfstring{anyadirCaracteristica()}{anyadirCaracteristica()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_af25a77d5c2b3edfe5c99fc9fa00729bf} 
+void Servicio\+En\+Emisora\+::anyadir\+Caracteristica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}} \&}]{car}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añade una característica al servicio. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em car} & Referencia a la característica que se añadirá al servicio. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servicio_en_emisora_a59267e82dca13b83913e578efacce794}\index{ServicioEnEmisora@{ServicioEnEmisora}!escribeUUID@{escribeUUID}}
+\index{escribeUUID@{escribeUUID}!ServicioEnEmisora@{ServicioEnEmisora}}
+\doxysubsubsection{\texorpdfstring{escribeUUID()}{escribeUUID()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_a59267e82dca13b83913e578efacce794} 
+void Servicio\+En\+Emisora\+::escribe\+UUID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Escribe el UUID del servicio en el puerto serie. 
+
+\Hypertarget{class_servicio_en_emisora_a0d04b53b2379140293924ef1ecbfeebe}\index{ServicioEnEmisora@{ServicioEnEmisora}!operator BLEService \&@{operator BLEService \&}}
+\index{operator BLEService \&@{operator BLEService \&}!ServicioEnEmisora@{ServicioEnEmisora}}
+\doxysubsubsection{\texorpdfstring{operator BLEService \&()}{operator BLEService \&()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_a0d04b53b2379140293924ef1ecbfeebe} 
+Servicio\+En\+Emisora\+::operator BLEService \& (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobrecarga del operador para devolver el servicio BLE. 
+
+\begin{DoxyReturn}{Devuelve}
+Referencia al servicio BLE. 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+Hola\+Mundo\+IBeacon/\mbox{\hyperlink{_servicio_en_emisora_8h}{Servicio\+En\+Emisora.\+h}}\end{DoxyCompactItemize}

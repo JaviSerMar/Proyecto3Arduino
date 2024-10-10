@@ -1,0 +1,98 @@
+\doxysection{Referencia del archivo Hola\+Mundo\+IBeacon/\+Servicio\+En\+Emisora.h}
+\hypertarget{_servicio_en_emisora_8h}{}\label{_servicio_en_emisora_8h}\index{HolaMundoIBeacon/ServicioEnEmisora.h@{HolaMundoIBeacon/ServicioEnEmisora.h}}
+
+
+Declaración de la clase \doxylink{class_servicio_en_emisora}{Servicio\+En\+Emisora} y sus características BLE.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+Gráfico de dependencias incluidas en Servicio\+En\+Emisora.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{_servicio_en_emisora_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{_servicio_en_emisora_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}}
+\begin{DoxyCompactList}\small\item\em Clase para gestionar un servicio BLE y sus características. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{Servicio\+En\+Emisora\+::\+Caracteristica}}
+\begin{DoxyCompactList}\small\item\em Clase que representa una característica BLE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_servicio_en_emisora_8h_aada7529d57b6678988eaa3e0acf84aff}{al\+Reves}} (T \texorpdfstring{$\ast$}{*}p, int n)
+\begin{DoxyCompactList}\small\item\em Invierte los elementos de un arreglo. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_servicio_en_emisora_8h_a4493ee26019e14ff5945192a58d5da3a}{string\+AUint8\+Al\+Reves}} (const char \texorpdfstring{$\ast$}{*}p\+String, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Uint, int tam\+Max)
+\begin{DoxyCompactList}\small\item\em Convierte una cadena a un arreglo de bytes y lo invierte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Declaración de la clase \doxylink{class_servicio_en_emisora}{Servicio\+En\+Emisora} y sus características BLE. 
+
+Este archivo contiene la definición de la clase {\ttfamily \doxylink{class_servicio_en_emisora}{Servicio\+En\+Emisora}}, que permite gestionar servicios y características BLE (Bluetooth Low Energy) en una emisora. También incluye funciones auxiliares para manipular datos en formato inverso. 
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_servicio_en_emisora_8h_aada7529d57b6678988eaa3e0acf84aff}\index{ServicioEnEmisora.h@{ServicioEnEmisora.h}!alReves@{alReves}}
+\index{alReves@{alReves}!ServicioEnEmisora.h@{ServicioEnEmisora.h}}
+\doxysubsubsection{\texorpdfstring{alReves()}{alReves()}}
+{\footnotesize\ttfamily \label{_servicio_en_emisora_8h_aada7529d57b6678988eaa3e0acf84aff} 
+template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} al\+Reves (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Invierte los elementos de un arreglo. 
+
+Esta función toma un puntero a un arreglo de tipo {\ttfamily T} y lo invierte en su lugar.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & El tipo de los elementos del arreglo. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & Puntero al arreglo. \\
+\hline
+{\em n} & Cantidad de elementos en el arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero al arreglo invertido. 
+\end{DoxyReturn}
+\Hypertarget{_servicio_en_emisora_8h_a4493ee26019e14ff5945192a58d5da3a}\index{ServicioEnEmisora.h@{ServicioEnEmisora.h}!stringAUint8AlReves@{stringAUint8AlReves}}
+\index{stringAUint8AlReves@{stringAUint8AlReves}!ServicioEnEmisora.h@{ServicioEnEmisora.h}}
+\doxysubsubsection{\texorpdfstring{stringAUint8AlReves()}{stringAUint8AlReves()}}
+{\footnotesize\ttfamily \label{_servicio_en_emisora_8h_a4493ee26019e14ff5945192a58d5da3a} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} string\+AUint8\+Al\+Reves (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{p\+String}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Uint}{, }\item[{int}]{tam\+Max}{}\end{DoxyParamCaption})}
+
+
+
+Convierte una cadena a un arreglo de bytes y lo invierte. 
+
+Copia los caracteres de una cadena a un arreglo de tipo {\ttfamily uint8\+\_\+t} y los coloca en orden inverso.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+String} & Puntero a la cadena original. \\
+\hline
+{\em p\+Uint} & Puntero al arreglo de destino de tipo {\ttfamily uint8\+\_\+t}. \\
+\hline
+{\em tam\+Max} & Tamaño máximo del arreglo de destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero al arreglo {\ttfamily p\+Uint} con los valores invertidos. 
+\end{DoxyReturn}

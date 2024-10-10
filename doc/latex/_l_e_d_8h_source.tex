@@ -1,0 +1,59 @@
+\doxysection{LED.\+h}
+\hypertarget{_l_e_d_8h_source}{}\label{_l_e_d_8h_source}\index{HolaMundoIBeacon/LED.h@{HolaMundoIBeacon/LED.h}}
+\mbox{\hyperlink{_l_e_d_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LED\_H\_INCLUIDO}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LED\_H\_INCLUIDO}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}\ (\textcolor{keywordtype}{long}\ tiempo)\ \{}
+\DoxyCodeLine{00021\ \ \ delay\ (tiempo);}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_l_e_d}{LED}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{int}\ numeroLED;\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{bool}\ encendido;\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_l_e_d_a027bcd6d546b47fd3ef22685ed1f73e2}{LED}}\ (\textcolor{keywordtype}{int}\ numero)}
+\DoxyCodeLine{00047\ \ \ \ \ :\ numeroLED\ (numero),\ encendido(false)}
+\DoxyCodeLine{00048\ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ pinMode(numeroLED,\ OUTPUT);}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}\ ();}
+\DoxyCodeLine{00051\ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}}\ ()\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ digitalWrite(numeroLED,\ HIGH);\ }
+\DoxyCodeLine{00061\ \ \ \ \ encendido\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00062\ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}\ ()\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ digitalWrite(numeroLED,\ LOW);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ encendido\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a9b1361dbee5de756d142b1a2c3e685da}{alternar}}\ ()\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (encendido)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}}\ ();}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \}\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_e_d_a7431e9efb39a2890f75b4e235b8f617e}{brillar}}\ (\textcolor{keywordtype}{long}\ tiempo)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}}\ ();}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}(tiempo);\ }
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}}\ ();}
+\DoxyCodeLine{00101\ \ \ \}}
+\DoxyCodeLine{00102\ \};\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

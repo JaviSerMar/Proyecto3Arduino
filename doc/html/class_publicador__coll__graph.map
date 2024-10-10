@@ -1,0 +1,5 @@
+<map id="Publicador" name="Publicador">
+<area shape="rect" id="Node000001" title="Clase encargada de publicar mediciones de CO2 y temperatura usando BLE." alt="" coords="59,464,207,597"/>
+<area shape="rect" id="Node000002" href="$class_emisora_b_l_e.html" title="Clase para gestionar la funcionalidad de una emisora BLE, incluyendo la emisión de anuncios y la cone..." alt="" coords="5,5,261,400"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,400,136,447,131,447,131,400"/>
+</map>

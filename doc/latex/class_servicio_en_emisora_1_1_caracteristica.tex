@@ -1,0 +1,178 @@
+\doxysection{Referencia de la clase Servicio\+En\+Emisora\+::Caracteristica}
+\hypertarget{class_servicio_en_emisora_1_1_caracteristica}{}\label{class_servicio_en_emisora_1_1_caracteristica}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+
+
+Clase que representa una característica BLE.  
+
+
+
+
+{\ttfamily \#include $<$Servicio\+En\+Emisora.\+h$>$}
+
+
+
+Diagrama de colaboración de Servicio\+En\+Emisora\+::Caracteristica\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_servicio_en_emisora_1_1_caracteristica__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_a639f47133a8406e84aa237c123fd2e63}{Caracteristica}} (const char \texorpdfstring{$\ast$}{*}nombre\+Caracteristica\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_a646c15ae6b57fc25d144d2e2ed160c0c}{Caracteristica}} (const char \texorpdfstring{$\ast$}{*}nombre\+Caracteristica\+\_\+, uint8\+\_\+t props, Secure\+Mode\+\_\+t permiso\+Read, Secure\+Mode\+\_\+t permiso\+Write, uint8\+\_\+t tam)
+\begin{DoxyCompactList}\small\item\em Constructor avanzado de la clase \doxylink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_a7fe53370615887c50304300457c1114c}{asignar\+Propiedades\+Permisos\+YTamanyo\+Datos}} (uint8\+\_\+t props, Secure\+Mode\+\_\+t permiso\+Read, Secure\+Mode\+\_\+t permiso\+Write, uint8\+\_\+t tam)
+\begin{DoxyCompactList}\small\item\em Asigna propiedades, permisos y tamaño de datos a la característica. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_ac6642d92b4f2d80ee6c21081972987d7}{escribir\+Datos}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Escribe datos en la característica. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_ae3369332d51fb6e70a300b54c3a4f95d}{notificar\+Datos}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Notifica datos a los clientes BLE conectados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_ac3355c1918c2eddf58d34df1b30dd60d}{instalar\+Callback\+Caracteristica\+Escrita}} (\mbox{\hyperlink{class_servicio_en_emisora_a67e4204bdf55ba3d99624cbe47ee0eff}{Callback\+Caracteristica\+Escrita}} cb)
+\begin{DoxyCompactList}\small\item\em Instala un callback para manejar escritura de datos en la característica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica_ad93e0c5998aeb15c920cd5d6db7a0e3b}{activar}} ()
+\begin{DoxyCompactList}\small\item\em Activa la característica en el servicio BLE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que representa una característica BLE. 
+
+Cada característica tiene propiedades, permisos y puede notificar o escribir datos. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_servicio_en_emisora_1_1_caracteristica_a639f47133a8406e84aa237c123fd2e63}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!Caracteristica@{Caracteristica}}
+\index{Caracteristica@{Caracteristica}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{Caracteristica()}{Caracteristica()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_a639f47133a8406e84aa237c123fd2e63} 
+Servicio\+En\+Emisora\+::\+Caracteristica\+::\+Caracteristica (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+Caracteristica\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}. 
+
+Inicializa la característica con un nombre UUID.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\+Caracteristica\+\_\+} & Nombre de la característica en formato string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servicio_en_emisora_1_1_caracteristica_a646c15ae6b57fc25d144d2e2ed160c0c}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!Caracteristica@{Caracteristica}}
+\index{Caracteristica@{Caracteristica}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{Caracteristica()}{Caracteristica()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_a646c15ae6b57fc25d144d2e2ed160c0c} 
+Servicio\+En\+Emisora\+::\+Caracteristica\+::\+Caracteristica (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+Caracteristica\+\_\+}{, }\item[{uint8\+\_\+t}]{props}{, }\item[{Secure\+Mode\+\_\+t}]{permiso\+Read}{, }\item[{Secure\+Mode\+\_\+t}]{permiso\+Write}{, }\item[{uint8\+\_\+t}]{tam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor avanzado de la clase \doxylink{class_servicio_en_emisora_1_1_caracteristica}{Caracteristica}. 
+
+Inicializa la característica con propiedades, permisos y tamaño de datos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\+Caracteristica\+\_\+} & Nombre de la característica en formato string. \\
+\hline
+{\em props} & Propiedades de la característica (lectura, escritura, etc.). \\
+\hline
+{\em permiso\+Read} & Permiso de lectura. \\
+\hline
+{\em permiso\+Write} & Permiso de escritura. \\
+\hline
+{\em tam} & Tamaño máximo de los datos de la característica. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_servicio_en_emisora_1_1_caracteristica_ad93e0c5998aeb15c920cd5d6db7a0e3b}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!activar@{activar}}
+\index{activar@{activar}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{activar()}{activar()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_ad93e0c5998aeb15c920cd5d6db7a0e3b} 
+void Servicio\+En\+Emisora\+::\+Caracteristica\+::activar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Activa la característica en el servicio BLE. 
+
+Llama a la función {\ttfamily begin} para habilitar la característica. \Hypertarget{class_servicio_en_emisora_1_1_caracteristica_a7fe53370615887c50304300457c1114c}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!asignarPropiedadesPermisosYTamanyoDatos@{asignarPropiedadesPermisosYTamanyoDatos}}
+\index{asignarPropiedadesPermisosYTamanyoDatos@{asignarPropiedadesPermisosYTamanyoDatos}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{asignarPropiedadesPermisosYTamanyoDatos()}{asignarPropiedadesPermisosYTamanyoDatos()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_a7fe53370615887c50304300457c1114c} 
+void Servicio\+En\+Emisora\+::\+Caracteristica\+::asignar\+Propiedades\+Permisos\+YTamanyo\+Datos (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{props}{, }\item[{Secure\+Mode\+\_\+t}]{permiso\+Read}{, }\item[{Secure\+Mode\+\_\+t}]{permiso\+Write}{, }\item[{uint8\+\_\+t}]{tam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asigna propiedades, permisos y tamaño de datos a la característica. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em props} & Propiedades de la característica. \\
+\hline
+{\em permiso\+Read} & Permiso de lectura. \\
+\hline
+{\em permiso\+Write} & Permiso de escritura. \\
+\hline
+{\em tam} & Tamaño máximo de los datos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servicio_en_emisora_1_1_caracteristica_ac6642d92b4f2d80ee6c21081972987d7}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!escribirDatos@{escribirDatos}}
+\index{escribirDatos@{escribirDatos}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{escribirDatos()}{escribirDatos()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_ac6642d92b4f2d80ee6c21081972987d7} 
+uint16\+\_\+t Servicio\+En\+Emisora\+::\+Caracteristica\+::escribir\+Datos (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Escribe datos en la característica. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em str} & Cadena de datos a escribir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Cantidad de bytes escritos. 
+\end{DoxyReturn}
+\Hypertarget{class_servicio_en_emisora_1_1_caracteristica_ac3355c1918c2eddf58d34df1b30dd60d}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!instalarCallbackCaracteristicaEscrita@{instalarCallbackCaracteristicaEscrita}}
+\index{instalarCallbackCaracteristicaEscrita@{instalarCallbackCaracteristicaEscrita}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{instalarCallbackCaracteristicaEscrita()}{instalarCallbackCaracteristicaEscrita()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_ac3355c1918c2eddf58d34df1b30dd60d} 
+void Servicio\+En\+Emisora\+::\+Caracteristica\+::instalar\+Callback\+Caracteristica\+Escrita (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servicio_en_emisora_a67e4204bdf55ba3d99624cbe47ee0eff}{Callback\+Caracteristica\+Escrita}}}]{cb}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instala un callback para manejar escritura de datos en la característica. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cb} & Callback que se invocará cuando se escriban datos en la característica. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servicio_en_emisora_1_1_caracteristica_ae3369332d51fb6e70a300b54c3a4f95d}\index{ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}!notificarDatos@{notificarDatos}}
+\index{notificarDatos@{notificarDatos}!ServicioEnEmisora::Caracteristica@{ServicioEnEmisora::Caracteristica}}
+\doxysubsubsection{\texorpdfstring{notificarDatos()}{notificarDatos()}}
+{\footnotesize\ttfamily \label{class_servicio_en_emisora_1_1_caracteristica_ae3369332d51fb6e70a300b54c3a4f95d} 
+uint16\+\_\+t Servicio\+En\+Emisora\+::\+Caracteristica\+::notificar\+Datos (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Notifica datos a los clientes BLE conectados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em str} & Cadena de datos a notificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Cantidad de bytes notificados. 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+Hola\+Mundo\+IBeacon/\mbox{\hyperlink{_servicio_en_emisora_8h}{Servicio\+En\+Emisora.\+h}}\end{DoxyCompactItemize}

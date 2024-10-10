@@ -1,0 +1,114 @@
+\doxysection{Referencia de la clase LED}
+\hypertarget{class_l_e_d}{}\label{class_l_e_d}\index{LED@{LED}}
+
+
+Clase para controlar un \doxylink{class_l_e_d}{LED}.  
+
+
+
+
+{\ttfamily \#include $<$LED.\+h$>$}
+
+
+
+Diagrama de colaboración de LED\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{class_l_e_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_e_d_a027bcd6d546b47fd3ef22685ed1f73e2}{LED}} (int numero)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_l_e_d}{LED}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_e_d_a58660bafc0f4d6016392feabac555812}{encender}} ()
+\begin{DoxyCompactList}\small\item\em Enciende el \doxylink{class_l_e_d}{LED}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_e_d_a7f961959fa7405fec54de6121415db80}{apagar}} ()
+\begin{DoxyCompactList}\small\item\em Apaga el \doxylink{class_l_e_d}{LED}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_e_d_a9b1361dbee5de756d142b1a2c3e685da}{alternar}} ()
+\begin{DoxyCompactList}\small\item\em Alterna el estado del \doxylink{class_l_e_d}{LED}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_e_d_a7431e9efb39a2890f75b4e235b8f617e}{brillar}} (long tiempo)
+\begin{DoxyCompactList}\small\item\em Hace que el \doxylink{class_l_e_d}{LED} brille por un tiempo especificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para controlar un \doxylink{class_l_e_d}{LED}. 
+
+Esta clase permite encender, apagar, alternar el estado y hacer parpadear un \doxylink{class_l_e_d}{LED} conectado a un pin digital. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_l_e_d_a027bcd6d546b47fd3ef22685ed1f73e2}\index{LED@{LED}!LED@{LED}}
+\index{LED@{LED}!LED@{LED}}
+\doxysubsubsection{\texorpdfstring{LED()}{LED()}}
+{\footnotesize\ttfamily \label{class_l_e_d_a027bcd6d546b47fd3ef22685ed1f73e2} 
+LED\+::\+LED (\begin{DoxyParamCaption}\item[{int}]{numero}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_l_e_d}{LED}. 
+
+Inicializa el \doxylink{class_l_e_d}{LED} configurando el pin como salida y apagando el \doxylink{class_l_e_d}{LED}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em numero} & Número del pin digital al que está conectado el \doxylink{class_l_e_d}{LED}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_l_e_d_a9b1361dbee5de756d142b1a2c3e685da}\index{LED@{LED}!alternar@{alternar}}
+\index{alternar@{alternar}!LED@{LED}}
+\doxysubsubsection{\texorpdfstring{alternar()}{alternar()}}
+{\footnotesize\ttfamily \label{class_l_e_d_a9b1361dbee5de756d142b1a2c3e685da} 
+void LED\+::alternar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alterna el estado del \doxylink{class_l_e_d}{LED}. 
+
+Si el \doxylink{class_l_e_d}{LED} está encendido, lo apaga; si está apagado, lo enciende. \Hypertarget{class_l_e_d_a7f961959fa7405fec54de6121415db80}\index{LED@{LED}!apagar@{apagar}}
+\index{apagar@{apagar}!LED@{LED}}
+\doxysubsubsection{\texorpdfstring{apagar()}{apagar()}}
+{\footnotesize\ttfamily \label{class_l_e_d_a7f961959fa7405fec54de6121415db80} 
+void LED\+::apagar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apaga el \doxylink{class_l_e_d}{LED}. 
+
+Establece el pin digital correspondiente en estado bajo (LOW) para apagar el \doxylink{class_l_e_d}{LED} y marca el estado como apagado. \Hypertarget{class_l_e_d_a7431e9efb39a2890f75b4e235b8f617e}\index{LED@{LED}!brillar@{brillar}}
+\index{brillar@{brillar}!LED@{LED}}
+\doxysubsubsection{\texorpdfstring{brillar()}{brillar()}}
+{\footnotesize\ttfamily \label{class_l_e_d_a7431e9efb39a2890f75b4e235b8f617e} 
+void LED\+::brillar (\begin{DoxyParamCaption}\item[{long}]{tiempo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hace que el \doxylink{class_l_e_d}{LED} brille por un tiempo especificado. 
+
+Enciende el \doxylink{class_l_e_d}{LED}, espera durante el tiempo especificado y luego lo apaga.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tiempo} & Tiempo en milisegundos que el \doxylink{class_l_e_d}{LED} permanecerá encendido antes de apagarse. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_l_e_d_a58660bafc0f4d6016392feabac555812}\index{LED@{LED}!encender@{encender}}
+\index{encender@{encender}!LED@{LED}}
+\doxysubsubsection{\texorpdfstring{encender()}{encender()}}
+{\footnotesize\ttfamily \label{class_l_e_d_a58660bafc0f4d6016392feabac555812} 
+void LED\+::encender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enciende el \doxylink{class_l_e_d}{LED}. 
+
+Establece el pin digital correspondiente en estado alto (HIGH) para encender el \doxylink{class_l_e_d}{LED} y marca el estado como encendido. 
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+Hola\+Mundo\+IBeacon/\mbox{\hyperlink{_l_e_d_8h}{LED.\+h}}\end{DoxyCompactItemize}

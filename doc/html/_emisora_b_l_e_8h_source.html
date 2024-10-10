@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_arduino: Archivo de código fuente HolaMundoIBeacon/EmisoraBLE.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_arduino
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_57e557693f04122e6735f024670d514d.html">HolaMundoIBeacon</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">EmisoraBLE.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_emisora_b_l_e_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef EMISORA_H_INCLUIDO</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define EMISORA_H_INCLUIDO</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_servicio_en_emisora_8h.html">ServicioEnEmisora.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_emisora_b_l_e.html">EmisoraBLE</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* nombreEmisora;    </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">const</span> uint16_t fabricanteID;  </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">const</span> int8_t txPower;         </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#aba376ee8184344748c68c4b5eef0b6fa">   18</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="class_emisora_b_l_e.html#aba376ee8184344748c68c4b5eef0b6fa">CallbackConexionEstablecida</a> = void (uint16_t connHandle);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a3e58e4eeee1312374b129dc90188b728">   20</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="class_emisora_b_l_e.html#a3e58e4eeee1312374b129dc90188b728">CallbackConexionTerminada</a> = void (uint16_t connHandle, uint8_t reason);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#ae2e94b95bde4cddf0038deb0368cc5bf">   29</a></span>  <a class="code hl_function" href="class_emisora_b_l_e.html#ae2e94b95bde4cddf0038deb0368cc5bf">EmisoraBLE</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* nombreEmisora_, <span class="keyword">const</span> uint16_t fabricanteID_, <span class="keyword">const</span> int8_t txPower_)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    : nombreEmisora(nombreEmisora_), fabricanteID(fabricanteID_), txPower(txPower_)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a31f9c768b91b9e353f693f509af3ea73">   37</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a31f9c768b91b9e353f693f509af3ea73">encenderEmisora</a>() {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Bluefruit.begin();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_emisora_b_l_e.html#aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#ada243f2f1185a7d66ea33de6bdb06590">   48</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#ada243f2f1185a7d66ea33de6bdb06590">encenderEmisora</a>(<a class="code hl_typedef" href="class_emisora_b_l_e.html#aba376ee8184344748c68c4b5eef0b6fa">CallbackConexionEstablecida</a> cbce, <a class="code hl_typedef" href="class_emisora_b_l_e.html#a3e58e4eeee1312374b129dc90188b728">CallbackConexionTerminada</a> cbct) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="class_emisora_b_l_e.html#a31f9c768b91b9e353f693f509af3ea73">encenderEmisora</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_emisora_b_l_e.html#ae15e223776af83a8cac07564c168d0b9">instalarCallbackConexionEstablecida</a>(cbce);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="class_emisora_b_l_e.html#a2bb6b319046a10641619c1388f7fe351">instalarCallbackConexionTerminada</a>(cbct);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#aeede390b7a6502baecb48e9db77120b4">   57</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</a>() {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_emisora_b_l_e.html#ac32548698cf69ecef9e96941fc2e1b94">estaAnunciando</a>()) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      Bluefruit.Advertising.stop();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#ac32548698cf69ecef9e96941fc2e1b94">   68</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_emisora_b_l_e.html#ac32548698cf69ecef9e96941fc2e1b94">estaAnunciando</a>() {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> Bluefruit.Advertising.isRunning();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#aff23b85351177e685353b1ee92a1558f">   80</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#aff23b85351177e685353b1ee92a1558f">emitirAnuncioIBeacon</a>(uint8_t* beaconUUID, int16_t major, int16_t minor, uint8_t rssi) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="class_emisora_b_l_e.html#aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    BLEBeacon elBeacon(beaconUUID, major, minor, rssi);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    elBeacon.setManufacturer(fabricanteID);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    Bluefruit.setTxPower(txPower);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    Bluefruit.setName(nombreEmisora);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    Bluefruit.ScanResponse.addName();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    Bluefruit.Advertising.setBeacon(elBeacon);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    Bluefruit.Advertising.restartOnDisconnect(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    Bluefruit.Advertising.setInterval(100, 100);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    Bluefruit.Advertising.start(0);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a8439d1e85ec8d630fcd33b01d8987d41">   99</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a8439d1e85ec8d630fcd33b01d8987d41">emitirAnuncioIBeaconLibre</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* carga, <span class="keyword">const</span> uint8_t tamanyoCarga) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="class_emisora_b_l_e.html#aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    Bluefruit.Advertising.clearData();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    Bluefruit.ScanResponse.clearData();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    Bluefruit.setName(nombreEmisora);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    Bluefruit.ScanResponse.addName();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    Bluefruit.Advertising.addFlags(BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    uint8_t restoPrefijoYCarga[4+21] = {0x4c, 0x00, 0x02, 21, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;-&#39;</span>};</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    memcpy(&amp;restoPrefijoYCarga[4], &amp;carga[0], (tamanyoCarga &gt; 21 ? 21 : tamanyoCarga));</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    Bluefruit.Advertising.addData(BLE_GAP_AD_TYPE_MANUFACTURER_SPECIFIC_DATA, &amp;restoPrefijoYCarga[0], 4 + 21);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    Bluefruit.Advertising.restartOnDisconnect(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    Bluefruit.Advertising.setInterval(100, 100);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    Bluefruit.Advertising.setFastTimeout(1);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    Bluefruit.Advertising.start(0);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    Globales::elPuerto.escribir(<span class="stringliteral">&quot;emitiriBeacon libre Bluefruit.Advertising.start(0);\n&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a0f027a1c447357c5fe79200b36451731">  123</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a0f027a1c447357c5fe79200b36451731">anyadirServicio</a>(<a class="code hl_class" href="class_servicio_en_emisora.html">ServicioEnEmisora</a>&amp; servicio) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    Globales::elPuerto.escribir(<span class="stringliteral">&quot; Bluefruit.Advertising.addService( servicio ); \n&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">bool</span> r = Bluefruit.Advertising.addService(servicio);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span> (!r) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      Serial.println(<span class="stringliteral">&quot; SERVICIO NO AÑADIDO \n&quot;</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a074a16066fc8ae37567a342e3df63bf5">  138</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</a>(<a class="code hl_class" href="class_servicio_en_emisora.html">ServicioEnEmisora</a>&amp; servicio) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a0f027a1c447357c5fe79200b36451731">anyadirServicio</a>(servicio);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... T&gt;</div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#aa589659b63ae877910eab1b39a93a339">  151</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_emisora_b_l_e.html#aa589659b63ae877910eab1b39a93a339">anyadirServicioConSusCaracteristicas</a>(<a class="code hl_class" href="class_servicio_en_emisora.html">ServicioEnEmisora</a>&amp; servicio, <a class="code hl_class" href="class_servicio_en_emisora_1_1_caracteristica.html">ServicioEnEmisora::Caracteristica</a>&amp; caracteristica, T&amp;... restoCaracteristicas) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    servicio.<a class="code hl_function" href="class_servicio_en_emisora.html#af25a77d5c2b3edfe5c99fc9fa00729bf">anyadirCaracteristica</a>(caracteristica);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</a>(servicio, restoCaracteristicas...);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... T&gt;</div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a0a0673823174ce9ffb96fb1c0dfb11ab">  164</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a0a0673823174ce9ffb96fb1c0dfb11ab">anyadirServicioConSusCaracteristicasYActivar</a>(<a class="code hl_class" href="class_servicio_en_emisora.html">ServicioEnEmisora</a>&amp; servicio, T&amp;... restoCaracteristicas) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">bool</span> r = <a class="code hl_function" href="class_emisora_b_l_e.html#a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</a>(servicio, restoCaracteristicas...);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    servicio.<a class="code hl_function" href="class_servicio_en_emisora.html#a387f170420610e1ba1fe71b471c1ca23">activarServicio</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  }</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#ae15e223776af83a8cac07564c168d0b9">  175</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#ae15e223776af83a8cac07564c168d0b9">instalarCallbackConexionEstablecida</a>(<a class="code hl_typedef" href="class_emisora_b_l_e.html#aba376ee8184344748c68c4b5eef0b6fa">CallbackConexionEstablecida</a> cb) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    Bluefruit.Periph.setConnectCallback(cb);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  }</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#a2bb6b319046a10641619c1388f7fe351">  184</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_emisora_b_l_e.html#a2bb6b319046a10641619c1388f7fe351">instalarCallbackConexionTerminada</a>(<a class="code hl_typedef" href="class_emisora_b_l_e.html#a3e58e4eeee1312374b129dc90188b728">CallbackConexionTerminada</a> cb) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    Bluefruit.Periph.setDisconnectCallback(cb);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="class_emisora_b_l_e.html#aa863c5f29e1f0d4dd1ae023b30350960">  194</a></span>  BLEConnection* <a class="code hl_function" href="class_emisora_b_l_e.html#aa863c5f29e1f0d4dd1ae023b30350960">getConexion</a>(uint16_t connHandle) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">return</span> Bluefruit.Connection(connHandle);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  }</div>
+</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>}; <span class="comment">// class EmisoraBLE</span></div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_servicio_en_emisora_8h_html"><div class="ttname"><a href="_servicio_en_emisora_8h.html">ServicioEnEmisora.h</a></div><div class="ttdoc">Declaración de la clase ServicioEnEmisora y sus características BLE.</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html"><div class="ttname"><a href="class_emisora_b_l_e.html">EmisoraBLE</a></div><div class="ttdoc">Clase para gestionar la funcionalidad de una emisora BLE, incluyendo la emisión de anuncios y la cone...</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:10</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a074a16066fc8ae37567a342e3df63bf5"><div class="ttname"><a href="class_emisora_b_l_e.html#a074a16066fc8ae37567a342e3df63bf5">EmisoraBLE::anyadirServicioConSusCaracteristicas</a></div><div class="ttdeci">bool anyadirServicioConSusCaracteristicas(ServicioEnEmisora &amp;servicio)</div><div class="ttdoc">Añade un servicio y sus características a la emisora BLE.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:138</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a0a0673823174ce9ffb96fb1c0dfb11ab"><div class="ttname"><a href="class_emisora_b_l_e.html#a0a0673823174ce9ffb96fb1c0dfb11ab">EmisoraBLE::anyadirServicioConSusCaracteristicasYActivar</a></div><div class="ttdeci">bool anyadirServicioConSusCaracteristicasYActivar(ServicioEnEmisora &amp;servicio, T &amp;... restoCaracteristicas)</div><div class="ttdoc">Añade un servicio con varias características y lo activa.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:164</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a0f027a1c447357c5fe79200b36451731"><div class="ttname"><a href="class_emisora_b_l_e.html#a0f027a1c447357c5fe79200b36451731">EmisoraBLE::anyadirServicio</a></div><div class="ttdeci">bool anyadirServicio(ServicioEnEmisora &amp;servicio)</div><div class="ttdoc">Añade un servicio a la emisora BLE.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:123</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a2bb6b319046a10641619c1388f7fe351"><div class="ttname"><a href="class_emisora_b_l_e.html#a2bb6b319046a10641619c1388f7fe351">EmisoraBLE::instalarCallbackConexionTerminada</a></div><div class="ttdeci">void instalarCallbackConexionTerminada(CallbackConexionTerminada cb)</div><div class="ttdoc">Instala un callback para la conexión terminada.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:184</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a31f9c768b91b9e353f693f509af3ea73"><div class="ttname"><a href="class_emisora_b_l_e.html#a31f9c768b91b9e353f693f509af3ea73">EmisoraBLE::encenderEmisora</a></div><div class="ttdeci">void encenderEmisora()</div><div class="ttdoc">Enciende la emisora BLE y detiene cualquier anuncio en curso.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:37</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a3e58e4eeee1312374b129dc90188b728"><div class="ttname"><a href="class_emisora_b_l_e.html#a3e58e4eeee1312374b129dc90188b728">EmisoraBLE::CallbackConexionTerminada</a></div><div class="ttdeci">void(uint16_t connHandle, uint8_t reason) CallbackConexionTerminada</div><div class="ttdoc">Callback para gestionar la finalización de una conexión.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:20</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_a8439d1e85ec8d630fcd33b01d8987d41"><div class="ttname"><a href="class_emisora_b_l_e.html#a8439d1e85ec8d630fcd33b01d8987d41">EmisoraBLE::emitirAnuncioIBeaconLibre</a></div><div class="ttdeci">void emitirAnuncioIBeaconLibre(const char *carga, const uint8_t tamanyoCarga)</div><div class="ttdoc">Emite un anuncio iBeacon con carga libre de datos.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:99</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_aa589659b63ae877910eab1b39a93a339"><div class="ttname"><a href="class_emisora_b_l_e.html#aa589659b63ae877910eab1b39a93a339">EmisoraBLE::anyadirServicioConSusCaracteristicas</a></div><div class="ttdeci">bool anyadirServicioConSusCaracteristicas(ServicioEnEmisora &amp;servicio, ServicioEnEmisora::Caracteristica &amp;caracteristica, T &amp;... restoCaracteristicas)</div><div class="ttdoc">Añade un servicio con varias características a la emisora BLE.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:151</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_aa863c5f29e1f0d4dd1ae023b30350960"><div class="ttname"><a href="class_emisora_b_l_e.html#aa863c5f29e1f0d4dd1ae023b30350960">EmisoraBLE::getConexion</a></div><div class="ttdeci">BLEConnection * getConexion(uint16_t connHandle)</div><div class="ttdoc">Obtiene la conexión BLE correspondiente al identificador de conexión.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:194</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_aba376ee8184344748c68c4b5eef0b6fa"><div class="ttname"><a href="class_emisora_b_l_e.html#aba376ee8184344748c68c4b5eef0b6fa">EmisoraBLE::CallbackConexionEstablecida</a></div><div class="ttdeci">void(uint16_t connHandle) CallbackConexionEstablecida</div><div class="ttdoc">Callback para gestionar la conexión establecida.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:18</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_ac32548698cf69ecef9e96941fc2e1b94"><div class="ttname"><a href="class_emisora_b_l_e.html#ac32548698cf69ecef9e96941fc2e1b94">EmisoraBLE::estaAnunciando</a></div><div class="ttdeci">bool estaAnunciando()</div><div class="ttdoc">Verifica si la emisora está anunciando.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:68</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_ada243f2f1185a7d66ea33de6bdb06590"><div class="ttname"><a href="class_emisora_b_l_e.html#ada243f2f1185a7d66ea33de6bdb06590">EmisoraBLE::encenderEmisora</a></div><div class="ttdeci">void encenderEmisora(CallbackConexionEstablecida cbce, CallbackConexionTerminada cbct)</div><div class="ttdoc">Enciende la emisora BLE y registra los callbacks para la conexión.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:48</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_ae15e223776af83a8cac07564c168d0b9"><div class="ttname"><a href="class_emisora_b_l_e.html#ae15e223776af83a8cac07564c168d0b9">EmisoraBLE::instalarCallbackConexionEstablecida</a></div><div class="ttdeci">void instalarCallbackConexionEstablecida(CallbackConexionEstablecida cb)</div><div class="ttdoc">Instala un callback para la conexión establecida.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:175</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_ae2e94b95bde4cddf0038deb0368cc5bf"><div class="ttname"><a href="class_emisora_b_l_e.html#ae2e94b95bde4cddf0038deb0368cc5bf">EmisoraBLE::EmisoraBLE</a></div><div class="ttdeci">EmisoraBLE(const char *nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)</div><div class="ttdoc">Constructor para inicializar una emisora BLE.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:29</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_aeede390b7a6502baecb48e9db77120b4"><div class="ttname"><a href="class_emisora_b_l_e.html#aeede390b7a6502baecb48e9db77120b4">EmisoraBLE::detenerAnuncio</a></div><div class="ttdeci">void detenerAnuncio()</div><div class="ttdoc">Detiene el anuncio si está en ejecución.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:57</div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_aff23b85351177e685353b1ee92a1558f"><div class="ttname"><a href="class_emisora_b_l_e.html#aff23b85351177e685353b1ee92a1558f">EmisoraBLE::emitirAnuncioIBeacon</a></div><div class="ttdeci">void emitirAnuncioIBeacon(uint8_t *beaconUUID, int16_t major, int16_t minor, uint8_t rssi)</div><div class="ttdoc">Emite un anuncio en formato iBeacon.</div><div class="ttdef"><b>Definition</b> EmisoraBLE.h:80</div></div>
+<div class="ttc" id="aclass_servicio_en_emisora_1_1_caracteristica_html"><div class="ttname"><a href="class_servicio_en_emisora_1_1_caracteristica.html">ServicioEnEmisora::Caracteristica</a></div><div class="ttdoc">Clase que representa una característica BLE.</div><div class="ttdef"><b>Definition</b> ServicioEnEmisora.h:99</div></div>
+<div class="ttc" id="aclass_servicio_en_emisora_html"><div class="ttname"><a href="class_servicio_en_emisora.html">ServicioEnEmisora</a></div><div class="ttdoc">Clase para gestionar un servicio BLE y sus características.</div><div class="ttdef"><b>Definition</b> ServicioEnEmisora.h:73</div></div>
+<div class="ttc" id="aclass_servicio_en_emisora_html_a387f170420610e1ba1fe71b471c1ca23"><div class="ttname"><a href="class_servicio_en_emisora.html#a387f170420610e1ba1fe71b471c1ca23">ServicioEnEmisora::activarServicio</a></div><div class="ttdeci">void activarServicio()</div><div class="ttdoc">Activa el servicio BLE y sus características.</div><div class="ttdef"><b>Definition</b> ServicioEnEmisora.h:305</div></div>
+<div class="ttc" id="aclass_servicio_en_emisora_html_af25a77d5c2b3edfe5c99fc9fa00729bf"><div class="ttname"><a href="class_servicio_en_emisora.html#af25a77d5c2b3edfe5c99fc9fa00729bf">ServicioEnEmisora::anyadirCaracteristica</a></div><div class="ttdeci">void anyadirCaracteristica(Caracteristica &amp;car)</div><div class="ttdoc">Añade una característica al servicio.</div><div class="ttdef"><b>Definition</b> ServicioEnEmisora.h:294</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

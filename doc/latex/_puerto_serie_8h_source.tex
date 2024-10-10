@@ -1,0 +1,35 @@
+\doxysection{Puerto\+Serie.\+h}
+\hypertarget{_puerto_serie_8h_source}{}\label{_puerto_serie_8h_source}\index{HolaMundoIBeacon/PuertoSerie.h@{HolaMundoIBeacon/PuertoSerie.h}}
+\mbox{\hyperlink{_puerto_serie_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ PUERTO\_SERIE\_H\_INCLUIDO}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ PUERTO\_SERIE\_H\_INCLUIDO}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_puerto_serie}{PuertoSerie}}\ \ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_puerto_serie_a8f0bfae3f90577642131689eab4489b1}{PuertoSerie}}\ (\textcolor{keywordtype}{long}\ baudios)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ Serial.begin(\ baudios\ );\ }
+\DoxyCodeLine{00036\ \ \ \}\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_puerto_serie_acdb696d30440a38dac61f5f73625935a}{esperarDisponible}}()\ \{}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ delay(10);\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \}\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_puerto_serie_ab1b6cecc098aa30e5704dc294deec1f4}{escribir}}\ (T\ mensaje)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ Serial.print(\ mensaje\ );\ }
+\DoxyCodeLine{00063\ \ \ \}\ }
+\DoxyCodeLine{00064\ \ \ }
+\DoxyCodeLine{00065\ \};\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
